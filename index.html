@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Modern E-Commerce</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>🛒 Trendy Store</h1>
+</header>
+
+<nav>
+  <button onclick="showPage('home')">Home</button>
+  <button onclick="showPage('products')">Products</button>
+  <button onclick="showPage('cart')">Cart</button>
+  <button onclick="showPage('contact')">Contact</button>
+</nav>
+
+<div id="home" class="section active">
+  <h2>Welcome to Trendy Store</h2>
+  <p>Shop stylish products easily</p>
+</div>
+
+<div id="products" class="section">
+  <h2>Products</h2>
+  <div class="products">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff">
+      <h3>Sneakers</h3>
+      <p>₹2000</p>
+      <button onclick="addToCart('Sneakers',2000)">Add to Cart</button>
+      <button onclick="toggleDetails(this)">View Details</button>
+      <p class="details">High quality sneakers</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d">
+      <h3>Headphones</h3>
+      <p>₹3000</p>
+      <button onclick="addToCart('Headphones',3000)">Add to Cart</button>
+      <button onclick="toggleDetails(this)">View Details</button>
+      <p class="details">Noise cancelling headphones</p>
+    </div>
+
+  </div>
+</div>
+
+<div id="cart" class="section">
+  <h2>Your Cart</h2>
+  <div id="cartItems"></div>
+  <button onclick="calculateTotal()">Calculate Total</button>
+  <h3 id="total"></h3>
+</div>
+
+<div id="contact" class="section">
+  <h2>Contact</h2>
+  <input type="text" placeholder="Name"><br><br>
+  <input type="email" placeholder="Email"><br><br>
+  <textarea placeholder="Message"></textarea><br><br>
+  <button>Submit</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
